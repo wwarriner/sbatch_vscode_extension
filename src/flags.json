@@ -1,0 +1,602 @@
+[
+  {
+    "long": "array",
+    "short": "a",
+    "values": "number_list"
+  },
+  {
+    "long": "account",
+    "short": "A",
+    "values": "[[:word:]]"
+  },
+  {
+    "long": "acctg-freq",
+    "short": null,
+    "values": "ignore"
+  },
+  {
+    "long": "extra-node-info",
+    "short": "B",
+    "values": "ignore"
+  },
+  {
+    "long": "bb",
+    "short": null,
+    "values": "ignore"
+  },
+  {
+    "long": "bbf",
+    "short": null,
+    "values": "ignore"
+  },
+  {
+    "long": "cluster-constraint",
+    "short": null,
+    "values": "ignore"
+  },
+  {
+    "long": "constraint",
+    "short": "C",
+    "values": "ignore"
+  },
+  {
+    "long": "cpu-freq",
+    "short": null,
+    "values": "ignore"
+  },
+  {
+    "long": "dependency",
+    "short": "d",
+    "values": "ignore"
+  },
+  {
+    "long": "batch",
+    "short": null,
+    "values": "boolean_word_list"
+  },
+  {
+    "long": "begin",
+    "short": "b",
+    "values": {
+      "one_of": ["time", "delay"]
+    }
+  },
+  {
+    "long": "comment",
+    "short": null,
+    "values": "string"
+  },
+  {
+    "long": "contiguous",
+    "short": null,
+    "values": null
+  },
+  {
+    "long": "cores-per-socket",
+    "short": null,
+    "values": "integer"
+  },
+  {
+    "long": "cpus-per-gpu",
+    "short": null,
+    "values": "integer"
+  },
+  {
+    "long": "cpus-per-task",
+    "short": "c",
+    "values": "integer"
+  },
+  {
+    "long": "deadline",
+    "short": null,
+    "values": "time"
+  },
+  {
+    "long": "delay-boot",
+    "short": null,
+    "values": "integer"
+  },
+  {
+    "long": "distribution",
+    "short": "m",
+    "values": "ignore"
+  },
+  {
+    "long": "chdir",
+    "short": "D",
+    "values": "directory"
+  },
+  {
+    "long": "error",
+    "short": "e",
+    "values": "filename"
+  },
+  {
+    "long": "exclusive",
+    "short": null,
+    "values": {
+      "literals": {
+        "one_of": ["user", "mcs"]
+      }
+    }
+  },
+  {
+    "long": "export",
+    "short": null,
+    "values": {
+      "one_of": [
+        {
+          "any_of": [
+            {
+              "literal": "ALL"
+            },
+            "arg_list"
+          ]
+        },
+        {
+          "literal": "NONE"
+        }
+      ]
+    }
+  },
+  {
+    "long": "export-file",
+    "short": null,
+    "values": {
+      "one_of": ["filename", "integer"]
+    }
+  },
+  {
+    "long": "nodefile",
+    "short": "F",
+    "values": "filename"
+  },
+  { "long": "get-user-env", "short": null, "values": "ignore" },
+  {
+    "long": "gid",
+    "short": null,
+    "values": "group"
+  },
+  { "long": "gpu-bind", "short": null, "values": "ignore" },
+  { "long": "gpu-freq", "short": null, "values": "ignore" },
+  {
+    "long": "gpus",
+    "short": "G",
+    "values": {
+      "list": "gpu"
+    }
+  },
+  {
+    "long": "gpus-per-node",
+    "short": null,
+    "values": {
+      "list": "gpu"
+    }
+  },
+  {
+    "long": "gpus-per-socket",
+    "short": null,
+    "values": {
+      "list": "gpu"
+    }
+  },
+  {
+    "long": "gpus-per-taks",
+    "short": null,
+    "values": {
+      "list": "gpu"
+    }
+  },
+  {
+    "long": "gres",
+    "short": null,
+    "values": {
+      "one_of": [
+        {
+          "list": "gres"
+        },
+        {
+          "literal": "help"
+        }
+      ]
+    }
+  },
+  {
+    "long": "gres-flags",
+    "short": null,
+    "values": {
+      "literals": {
+        "one_of": ["disable-binding", "enforce-binding"]
+      }
+    }
+  },
+  {
+    "long": "hold",
+    "short": "H",
+    "values": null
+  },
+  {
+    "long": "help",
+    "short": "h",
+    "values": null
+  },
+  {
+    "long": "hint",
+    "short": null,
+    "values": {
+      "literals": {
+        "one_of": [
+          "compute_bound",
+          "memory_bound",
+          "multithread",
+          "nomultithread",
+          "help"
+        ]
+      }
+    }
+  },
+  {
+    "long": "ignore-pbs",
+    "short": null,
+    "values": null
+  },
+  {
+    "long": "input",
+    "short": "i",
+    "values": "filename"
+  },
+  {
+    "long": "job-name",
+    "short": "J",
+    "values": "[[:word:]]"
+  },
+  {
+    "long": "no-kill",
+    "short": "k",
+    "values": {
+      "one_of": [
+        null,
+        {
+          "literal": "off"
+        }
+      ]
+    }
+  },
+  {
+    "long": "kill-on-invalid-dep",
+    "short": null,
+    "values": {
+      "literals": {
+        "one_of": ["no", "yes"]
+      }
+    }
+  },
+  {
+    "long": "licenses",
+    "short": "L",
+    "values": {
+      "list": "license"
+    }
+  },
+  {
+    "long": "clusters",
+    "short": "M",
+    "values": "[[:word:]]"
+  },
+  {
+    "long": "mail-type",
+    "short": null,
+    "values": {
+      "one_of": [
+        null,
+        {
+          "literals": {
+            "one_of": [
+              "NONE",
+              "BEGIN",
+              "END",
+              "FAIL",
+              "REQUEUE",
+              "ALL",
+              "STAGE_OUT",
+              "TIME_LIMIT",
+              "TIME_LIMIT_90",
+              "TIME_LIMIT_80",
+              "TIME_LIMIT_50"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "long": "mail-user",
+    "short": null,
+    "values": "[[:word:]]"
+  },
+  {
+    "long": "mcs-label",
+    "short": null,
+    "values": "ignore"
+  },
+  {
+    "long": "mem",
+    "short": null,
+    "values": "memory"
+  },
+  {
+    "long": "mem-bind",
+    "short": null,
+    "values": "ignore"
+  },
+  {
+    "long": "mem-per-cpu",
+    "short": null,
+    "values": "memory"
+  },
+  {
+    "long": "mem-per-gpu",
+    "short": null,
+    "values": "memory"
+  },
+  {
+    "long": "mincpus",
+    "short": null,
+    "values": "integer"
+  },
+  {
+    "long": "network",
+    "short": null,
+    "values": "ignore"
+  },
+  {
+    "long": "nodes",
+    "short": "N",
+    "values": {
+      "range": "integer"
+    }
+  },
+  {
+    "long": "ntasks",
+    "short": "n",
+    "values": "integer"
+  },
+  {
+    "long": "nice",
+    "short": null,
+    "values": {
+      "one_of": [null, "int32"]
+    }
+  },
+  {
+    "long": "no-requeue",
+    "short": null,
+    "values": null
+  },
+  {
+    "long": "ntasks-per-core",
+    "short": null,
+    "values": "uint32"
+  },
+  {
+    "long": "ntasks-per-node",
+    "short": null,
+    "values": "uint32"
+  },
+  {
+    "long": "ntasks-per-socket",
+    "short": null,
+    "values": "uint32"
+  },
+  {
+    "long": "overcommit",
+    "short": "O",
+    "values": null
+  },
+  {
+    "long": "output",
+    "short": "o",
+    "values": "filename"
+  },
+  {
+    "long": "open-mode",
+    "short": null,
+    "values": {
+      "literals": {
+        "one_of": ["append", "truncate"]
+      }
+    }
+  },
+  {
+    "long": "parsable",
+    "short": null,
+    "values": null
+  },
+  {
+    "long": "partition",
+    "short": "p",
+    "values": {
+      "list": "[[:word:]]"
+    }
+  },
+  {
+    "long": "power",
+    "short": null,
+    "values": "ignore"
+  },
+  {
+    "long": "priority",
+    "short": null,
+    "values": {
+      "one_of": [
+        "int32",
+        {
+          "literal": "TOP"
+        }
+      ]
+    }
+  },
+  {
+    "long": "profile",
+    "short": null,
+    "values": {
+      "one_of": [
+        {
+          "literals": {
+            "one_of": ["all", "none"]
+          }
+        },
+        {
+          "literals": {
+            "any_of": ["energy", "task", "lustre", "network"]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "long": "propagate",
+    "short": null,
+    "values": "ignore"
+  },
+  {
+    "long": "qos",
+    "short": "q",
+    "values": "ignore"
+  },
+  {
+    "long": "quiet",
+    "short": "Q",
+    "values": null
+  },
+  {
+    "long": "reboot",
+    "short": null,
+    "values": null
+  },
+  {
+    "long": "requeue",
+    "short": null,
+    "values": null
+  },
+  {
+    "long": "reservation",
+    "short": null,
+    "values": "[[:word:]]"
+  },
+  {
+    "long": "oversubscribe",
+    "short": "s",
+    "values": null
+  },
+  {
+    "long": "core-spec",
+    "short": "S",
+    "values": null
+  },
+  {
+    "long": "signal",
+    "short": null,
+    "values": "ignore"
+  },
+  {
+    "long": "sockets-per-node",
+    "short": null,
+    "values": "integer"
+  },
+  {
+    "long": "spread-job",
+    "short": null,
+    "values": null
+  },
+  {
+    "long": "switches",
+    "short": null,
+    "values": "ignore"
+  },
+  {
+    "long": "time",
+    "short": "t",
+    "values": "time"
+  },
+  {
+    "long": "test-only",
+    "short": null,
+    "values": null
+  },
+  {
+    "long": "thread-spec",
+    "short": null,
+    "values": "integer"
+  },
+  {
+    "long": "threads-per-core",
+    "short": null,
+    "values": "integer"
+  },
+  {
+    "long": "time-min",
+    "short": null,
+    "values": "time"
+  },
+  {
+    "long": "tmp",
+    "short": null,
+    "values": "memory"
+  },
+  {
+    "long": "usage",
+    "short": null,
+    "values": null
+  },
+  {
+    "long": "uid",
+    "short": null,
+    "values": "[[:word:]]"
+  },
+  {
+    "long": "use-min-nodes",
+    "short": null,
+    "values": null
+  },
+  {
+    "long": "version",
+    "short": "V",
+    "values": null
+  },
+  {
+    "long": "verbose",
+    "short": "v",
+    "values": null
+  },
+  {
+    "long": "nodelist",
+    "short": "w",
+    "values": "ignore"
+  },
+  {
+    "long": "wait",
+    "short": "W",
+    "values": null
+  },
+  {
+    "long": "wait-all-nodes",
+    "short": null,
+    "values": "numeric_bool"
+  },
+  {
+    "long": "wckey",
+    "short": null,
+    "values": "ignore"
+  },
+  {
+    "long": "wrap",
+    "short": null,
+    "values": "ignore"
+  },
+  {
+    "long": "exclude",
+    "short": "x",
+    "values": "ignore"
+  }
+]
