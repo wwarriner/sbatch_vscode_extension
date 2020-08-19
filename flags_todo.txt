@@ -1,0 +1,25 @@
+export-file:: integer>=3
+gres:: emit warning if help
+propagate
+signal
+switches
+nodelist
+wckey
+
+VALIDATORS:
+number_list - 1,3,5-10
+boolean_word_list - ([[:word:]] separated by & or |)
+time - MMDDYY or MM/DD/YY or YYYY-MM-DD or YYYY-MM-DD[THH:MM[:SS]] strptime()
+delay - now[+integer[time_units]]
+time_units - seconds, minutes, hours, days, weeks
+directory - import fs from 'fs'
+filename - can have slurm %vars (same as directory)
+literal[s]
+arg_list - EDITOR,ARG1=test
+group - integer id or name
+gpu - [type:]number
+gres - name[[:type]:count]
+license - name[@server][:count]
+memory - integer>0[K|M|G|T]
+range - min[-max]
+ignore - absolutely anything is allowed except null (use xor with null)
